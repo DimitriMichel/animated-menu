@@ -1,7 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
 body {
+  font-family: Nunito, sans-serif;
   width: 100vw;
   height: 100vh;
-  background-color: #333333;
+  background-color: #6601FF;
   overflow: hidden;
   padding: 0;
   margin: 0;
@@ -13,15 +16,12 @@ body {
 li {
   cursor: pointer;
   margin: 0 10px 0 10px;
+}
 
-}
-li :hover {
-  background-color: whitesmoke;
-}
 .main-menu-container {
   background-color: white;
-  padding: 10px 0 20px 0;
-  border-radius: 10px;
+  padding: 15px 0 20px 0;
+  border-radius: 20px;
   width: 350px;
 }
 .main-menu {
@@ -34,19 +34,27 @@ li :hover {
   flex: 1;
   margin-right: 5px;
   position: relative;
-  top: 0.280em;
+  top: 0.28em;
 }
 .menu-item-name {
   width: 100%;
-padding: 5px;
-  border-top: #333333 1px solid;
+  padding: 7px 0;
 }
 .icon-and-name {
   margin: 0 10px 0 10px;
   display: flex;
 }
+
 .menu-title {
   padding-left: 20px;
   font-size: 45px;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.back-button{
+  top: .125em;
+  position: relative;
+  margin-right: 10px;
 }
