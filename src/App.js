@@ -3,6 +3,8 @@ import "./App.css";
 import { Route, Switch, useLocation } from "react-router-dom";
 import Initial from "./Components/Initial";
 import General from "./Components/General";
+import Bluetooth from "./Components/Bluetooth";
+import Wifi from "./Components/Wifi";
 import { AnimatePresence, motion } from "framer-motion";
 
 const menuContainerVariants = {
@@ -10,10 +12,7 @@ const menuContainerVariants = {
   visible: { scale: 1 },
   transition: { duration: 0.3 },
 };
-const mainMenuVariants = {
-  hidden: { x: "-100vw" },
-  visible: { x: 0 },
-};
+
 function App() {
   let location = useLocation();
 
@@ -30,6 +29,12 @@ function App() {
           <Switch location={location} key={location.key}>
             <Route path="/general">
               <General />
+            </Route>
+            <Route path="/bluetooth">
+              <Bluetooth />
+            </Route>
+            <Route path="/wifi">
+              <Wifi />
             </Route>
             <Route path="/">
               <Initial />

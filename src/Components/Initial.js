@@ -10,19 +10,21 @@ import { Link } from "react-router-dom";
 //animation variants
 const menuContainerVariants = {
   hidden: { x: "-1vw", opacity: 0.5 },
-  visible: { x: 0,  opacity: 1 },
+  visible: { x: 0, opacity: 1 },
   transition: { duration: 0.5 },
   exit: { x: "-100vh", transition: { ease: "easeInOut" } },
 };
 
-
 const Initial = () => {
   return (
     <motion.div variants={menuContainerVariants} exit="exit">
-      <div >
+      <div>
         <div className="menu-title">Settings</div>
         <ul className="main-menu">
-          <Link to="/general" style={{ textDecoration: "none", color:"black" }}>
+          <Link
+            to="/general"
+            style={{ textDecoration: "none", color: "black" }}
+          >
             <li>
               <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
                 <div className="menu-icon">
@@ -32,22 +34,29 @@ const Initial = () => {
               </motion.div>
             </li>
           </Link>
-          <li>
-            <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
-              <div className="menu-icon">
-                <IoMdAirplane />
-              </div>
-              <div className="menu-item-name">Airplane Mode</div>
-            </motion.div>
-          </li>
-          <li>
-            <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
-              <div className="menu-icon">
-                <IoMdWifi />
-              </div>
-              <div className="menu-item-name">Wifi</div>
-            </motion.div>
-          </li>
+          <Link
+            to="bluetooth"
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <li>
+              <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
+                <div className="menu-icon">
+                  <IoMdAirplane />
+                </div>
+                <div className="menu-item-name">Bluetooth</div>
+              </motion.div>
+            </li>
+          </Link>
+          <Link to="wifi" style={{ textDecoration: "none", color: "black" }}>
+            <li>
+              <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
+                <div className="menu-icon">
+                  <IoMdWifi />
+                </div>
+                <div className="menu-item-name">Wifi</div>
+              </motion.div>
+            </li>
+          </Link>
           <li>
             <motion.div whileTap={{ scale: 0.9 }} className="icon-and-name">
               <div className="menu-icon">

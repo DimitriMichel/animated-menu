@@ -4,25 +4,32 @@ body {
   font-family: Nunito, sans-serif;
   width: 100vw;
   height: 100vh;
-  background-color: #6601FF;
+  background-color: #6601ff;
   overflow: hidden;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 li {
   cursor: pointer;
   margin: 0 10px 0 10px;
 }
-
 .main-menu-container {
   background-color: white;
   padding: 15px 0 20px 0;
   border-radius: 20px;
   width: 350px;
+  height: 400px;
+
 }
 .main-menu {
   list-style: none;
@@ -53,8 +60,34 @@ li {
   cursor: pointer;
 }
 
-.back-button{
-  top: .125em;
+.back-button {
+  top: 0.125em;
   position: relative;
   margin-right: 10px;
+  float: left;
+}
+.title {
+  float: left;
+}
+
+.switch {
+  width: 100px;
+  margin: 0 auto;
+  background-color: #6601ff;
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-isOn="true"] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 40px;
 }
